@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false" monitoring="autodetect"
+         dynamicConfig="true">
+
+    <defaultCache overflowToDisk="false" eternal="false">
+        <persistence strategy="none"/>
+    </defaultCache>
+
+    <cache name="mnemonic"
+           maxElementsInMemory="1000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToLiveSeconds="3600"
+           timeToIdleSeconds="3000"
+           statistics="true"
+           copyOnRead="true"
+           copyOnWrite="true">
+        <persistence strategy="none"/>
+    </cache>
+
+    <cache name="currency"
+           maxElementsInMemory="1000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToLiveSeconds="3600"
+           timeToIdleSeconds="3000"
+           statistics="true"
+           copyOnRead="true"
+           copyOnWrite="true">
+        <persistence strategy="none"/>
+    </cache>
+
+</ehcache>
