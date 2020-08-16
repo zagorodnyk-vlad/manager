@@ -27,7 +27,6 @@ public class ExpensesController {
         expensesService.addExpenses(expensesDto);
     }
 
-
     @GetMapping("/summ")
     public BigDecimal summ(@RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate from,
                            @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate to,
