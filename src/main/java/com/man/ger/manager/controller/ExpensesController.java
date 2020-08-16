@@ -34,6 +34,7 @@ public class ExpensesController {
                            @RequestParam CodeMnemonic codeMnemonic) throws IOException {
         return  expensesService.sumByMnemonic(from,to,categoryId, codeMnemonic);
     }
+
     @DeleteMapping("/delete")
     public void delgete(@RequestParam Long id){
         expensesService.delete(id);
