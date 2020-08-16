@@ -38,5 +38,4 @@ public class ExpensesController {
     public void delgete(@RequestParam Long id){
         expensesService.delete(id);
     }
-
 }
