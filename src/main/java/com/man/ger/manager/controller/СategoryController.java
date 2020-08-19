@@ -1,6 +1,5 @@
 package com.man.ger.manager.controller;
 
-import com.man.ger.manager.entity.Category;
 import com.man.ger.manager.service.CategoryService;
 import com.man.ger.manager.view.CategoryView;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ public class СategoryController {
     CategoryService categoryService;
 
     @PostMapping("/addcategory")
-    public Long addCategory(@RequestParam String category) {
+    public Long addCategory(@RequestParam (value = "category") String category) {
         return categoryService.addCategory(category);
     }
 
