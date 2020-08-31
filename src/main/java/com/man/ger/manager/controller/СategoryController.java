@@ -5,6 +5,8 @@ import com.man.ger.manager.view.CategoryView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class СategoryController {
 
@@ -33,5 +35,10 @@ public class СategoryController {
     @DeleteMapping("/delet")
     public void deleteCategory(@RequestParam String name){
  categoryService.deleteCategory(name);
+    }
+
+    @GetMapping("/getallcategory")
+    public List<CategoryView> getAllCategory(@RequestParam(required =false,defaultValue ="false")boolean isSort){
+        return categoryService.findAllCategory(isSort);
     }
 }
